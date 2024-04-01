@@ -183,3 +183,326 @@ var bestfriend = `My best friend is ${trait1}, ${trait2} and ${trait3}.`;
 console.log(bestfriend);
 
 console.log(`My best friend is ${trait1}, ${trait2} and ${trait3}.`);
+// --------------------------------------------------------------------------------------------------
+
+console.clear()
+
+// typeof Operator - used to determine the data type of a varialbe (not a funciton, does not need parantheses)
+
+console.log(typeof 'Hello');
+console.log(typeof fullName);
+
+
+
+// --------------------------------------------------------------------------------------------------
+// >> NUMBER DATA TYPE << 
+// --------------------------------------------------------------------------------------------------
+
+// Unlike many other languages, JS only has one numeric data type 
+// strictly just put the number (no parathenses/etc )
+
+var someInt = 123 
+console.log(someInt);
+console.log(typeof someInt);
+
+var someFloat = 3.14;
+console.log(someFloat);
+console.log(typeof someFloat);
+
+
+// --------------------------------------------------------------------------------------------------
+// >> MATHEMATICAL CALCS
+// --------------------------------------------------------------------------------------------------
+
+//  >> ADDITION
+//  use the + operator
+var sum = 5 + 5;
+console.log(sum);
+
+sum += 5;  // sum = sum + 5
+console.log(sum);
+
+// JS provides the ++ which increments by 1
+sum++; // sum + 1 // sum = sum + 1
+console.log(sum);
+
+// >> SUBTRACTION
+//  use the operator
+var diff = 10 -5;
+console.log(diff);
+
+diff -= 2; // diff = diff -2
+console.log(diff)
+
+diff--; // diff -= 1 // diff = diff -1
+console.log(diff);
+
+
+// >> MULTIPLICATION (*), DIVISION(/), EXPONENTS(**) 
+// are all the same as they are in python
+var prod = 5 * 5
+console.log(prod)
+
+prod *= 5; // whatever prod currently is times 5
+console.log(prod); 
+
+var quotient = 88/22;
+console.log(quotient);
+
+quotient /= 8;
+console.log(quotient);
+
+var square = 5**2;
+console.log(square);
+square **= 2;
+console.log(square);
+
+
+// >> MODULO 
+// JS also has the modulo that finds the remainder  - use the % operator
+var mod = 37 % 8;
+console.log(mod);
+mod %= 2;
+console.log(mod);
+
+// >> FLOOR DIVISION (floor, full whole number rounded down)
+// use the build in Math object's floor method 
+var floor = Math.floor(5/2);
+console.log(floor);
+// also a CIELING!
+var ceil = Math.ceil(5/2);
+console.log(ceil);
+
+
+console.clear()
+
+// >> PREFIX and POSTFIX ++  
+// ++ will add 1 to whatever the current value is, and the placement matters 
+
+var prefixPlus = 1;
+console.log(++prefixPlus); // 2
+console.log(prefixPlus); // 2
+
+var postfixPlus = 1;
+console.log(postfixPlus++); // 1
+console.log(postfixPlus); // 2
+
+// Postfix
+console.log('Start');
+var i = 0;
+
+while (i < 10){
+    console.log(i++)
+}
+console.log('End');
+
+// Prefix
+console.log('Start');
+var j = 0;
+
+while (j < 10){
+    console.log(++j)
+}
+console.log('End');
+
+
+console.clear()
+// --------------------------------------------------------------------------------------------------
+// >> TYPE CONVERSION IN JS 
+// --------------------------------------------------------------------------------------------------
+
+// JS and the + Operator 
+// In python, you can't use + to concat/add different data types (like a str to int)
+var myNum = 123;
+var myOtherNum = '456';
+
+var added = myNum + myOtherNum;
+console.log(added);
+console.log(typeof added)
+// This implicitly converts the numbers into a string 
+
+// similar to the int() and str() functions in Python, JS has
+// parseInt(), parseFloat(), Number(), Number.toString() 
+
+var num1 = '47'
+console.log(num1);
+console.log(typeof num1);
+
+var num1A = parseInt(num1);
+console.log(typeof num1A);
+
+// parseInt on a decimal will round down to a whole number, use parseFloat if you want the full number
+var num2 = '987.65';
+console.log(num2);
+console.log(typeof num2);
+
+var num2A = parseInt(num2);
+console.log(num2A);
+console.log(typeof num2A); 
+var num2B = parseFloat(num2)
+console.log(num2B);
+
+//  Can also use the Number() constuctor function
+var num3 = '4983';
+
+var num3A = Number(num3);
+console.log(num3A);
+console.log(typeof num3A); 
+
+// passing in something that cannot convert to a number results in NaN 'Not a Number'
+var notANum = 'this is not a number'
+var notANumA = Number(notANum);
+console.log(notANumA);
+
+
+//  To convert a number to a string == Number.toString()
+var anotherNumber = 734;
+console.log(typeof anotherNumber)
+
+var stringNumber = anotherNumber.toString()
+console.log(stringNumber);
+console.log(typeof stringNumber);
+
+
+// JavaScript will try to implicity convert your types
+var guessThis1 = '10'
+var guessThis2 = '9';
+
+var quiz1 = guessThis1 + guessThis2;
+// A) 19 
+// B) 109 !!! 
+// C) NaN 
+// D) undefined 
+console.log(quiz1) // 109 
+
+var quiz2 = guessThis1 - guessThis2;
+console.log(quiz2) // 1 (it subtracted the numbers)
+
+
+var quiz3 = 10 > '9'
+console.log(quiz3) // 'true' because it converts 9 to a number 
+
+var quiz4 = '10' > '9'
+console.log(quiz4); // 'false' 
+// both values are already strings, so it does not need to convert types
+// strings compare alphabetically > the string 10 does not come before the string 9 in alphabetical order (UNICODE values)
+
+
+var quiz5 = 'S' > '9'
+console.log(quiz5)
+
+var quiz5 = 'S' > '9'
+console.log(quiz5)
+
+
+
+console.clear()
+// --------------------------------------------------------------------------------------------------
+// >> BOOLEANS
+// --------------------------------------------------------------------------------------------------
+
+// In JS, booleans are true and false (in python, it is True and False)
+
+var myBool1 = true;
+console.log(myBool1);
+console.log(typeof myBool1);
+
+var myBool2 = false;
+console.log(myBool2);
+console.log(typeof myBool2);
+
+// >> BOOLEAN OPERATORS (or comparison operators)
+//  mostly the same as Python
+
+// >, <, >=, <=, !=or <> 
+
+console.log(1 < 2); // true
+console.log(1 > 2); // false
+console.log(10 >= 10); // true
+console.log(10 <= 5); // false
+console.log(1 != 2); // true
+console.log(1 == 2); // false
+
+// JS has something called Strict Equality 
+// with loose equality (==), JS can implicitly convert and can check values as the same
+// with strict equality (===), JS ensures both type and value are the same
+
+var numOne = 1;
+var strOne = '1';
+
+console.log(`loose quality:`, numOne == strOne); // true
+console.log(`strict quality:`, numOne === strOne); // false 
+
+// >> NEGATE BOOLEANS
+//  In python, we have the 'Not' operator
+//  in JS, we only have the '!' operator - it can precede any boolean value and switch its value 
+
+
+console.log(`loose quality:`, numOne != strOne); // false 
+console.log(`strict quality:`, numOne !== strOne); // true
+
+console.log(true); // true
+console.log(!true); // false
+
+
+// --------------------------------------------------------------------------------------------------
+// >> CONTROL FLOW / IF STATEMENTS
+// --------------------------------------------------------------------------------------------------
+// aka... our conditional statements! 
+
+// in python, everything is about the indentation 
+
+// SYNTAX:
+// if(condition){code to run if true}
+
+var age = 88
+
+if (age > 18) {
+    console.log('You are eligible to vote.')
+}
+
+//  if/else 
+// if (condition) {code to run if true} else {code to run if false}
+var age2 = 34
+if (age2 > 35) {
+    console.log('You are old enough to run for president.')
+} else {
+    console.log('You are too young to run for president.')
+}
+
+// ELIF 
+// SYNTAX: 
+// if (condiiton) {code if true} else if (condition2){code if condition2 is true} else {code if all else is false}
+
+age == 99;
+
+if (age >= 65) {
+    console.log('You are a senior citizen')
+} else if (age >= 18){
+    console.log('You are an adult')
+} else {
+    console.log('You are a child')
+}; 
+
+age2 == 17;
+if (age2 >= 65) {
+    console.log('You are a senior citizen')
+} else if (age2 >= 18) {
+    console.log('You are an adult')
+} else {
+    console.log('You are a child')
+};
+
+
+// >> WHILE LOOPS 
+// while(condition){code to run each loop until condition is false}
+
+var myRandomNumber = Math.floor(Math.random() * 10)
+console.log('Starting random number;', myRandomNumber);
+
+while(myRandomNumber !== 5){
+    console.log(myRandomNumber)
+    myRandomNumber = Math.floor(Math.random() * 10)
+}
+
+console.log('Ending random number:', myRandomNumber);
