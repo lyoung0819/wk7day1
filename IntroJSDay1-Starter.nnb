@@ -38,9 +38,21 @@
         {
             "language": "javascript",
             "source": [
-                "// I am a comment \n\nconsole.log('Hellow World') // This is also a comment (this line of code logs hellow world to the console)\n\n/*\nI am able to write a comment\non multiple lines\nwoo hoo! */ \n"
+                "// I am a comment \n\nconsole.log('Hello World') // This is also a comment (this line of code logs hellow world to the console)\n\n/*\nI am able to write a comment\non multiple lines\nwoo hoo! */ \n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Hello World",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
@@ -234,9 +246,21 @@
         {
             "language": "javascript",
             "source": [
-                "// Bad Practice; AVOID!\n\n\n"
+                "// Bad Practice; AVOID!\n\nmessage = 'DO NOT DO THIS!'\n\nconsole.log(message);\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "DO NOT DO THIS!",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
@@ -248,23 +272,62 @@
         {
             "language": "javascript",
             "source": [
-                "//On One Line\n"
+                "//On One Line\nconsole.log(firstName); console.log(lastName);"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "George",
+                                "Clinton",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// on Multiple Lines (the semi colons are now optional)\n\n\n\n"
+                "// on Multiple Lines (the semi colons are now optional)\n\nconsole.log(firstName)\nconsole.log(lastName)\n\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "George",
+                                "Clinton",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// But this will not work\n"
+                "// But this typically will not work\nconsole.log(firstName) console.log(lastName)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "George",
+                                "Clinton",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
